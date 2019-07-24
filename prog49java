@@ -1,0 +1,35 @@
+import java.util.*;
+class cool
+{
+    public static void main(String[] args)
+    {
+        Scanner s=new Scanner(System.in);
+        String a=s.nextLine();
+        String b="";
+        int c=0,v=0;
+        for(int i=0;i<a.length();i++)
+        {
+            for(int j=i+1;j<=a.length();j++)
+            {
+                b+=a.substring(i,j);
+                for(int k=0;k<b.length();k++)
+                {
+                    if(b.charAt(k)=='a'||b.charAt(k)=='e'||b.charAt(k)=='i'||b.charAt(k)=='o'||b.charAt(k)=='u')
+                    {
+                        c++;
+                    }
+                }
+                if(c==b.length())
+                {
+                    if(c>v)
+                    {
+                        v=c;
+                    }
+                }
+                b="";
+                c=0;
+            }
+        }
+        System.out.println(v);
+    }
+}
